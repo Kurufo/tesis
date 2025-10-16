@@ -8,11 +8,11 @@ def generar_matriz(n, seed=None):
 
     # Diagonal principal
     for i in range(n):
-        M[i, i] = i + 1
+        M[i, i] = i
 
     # Diagonal justo encima de la principal
     for i in range(n - 1):
-        M[i, i + 1] = i + 1
+        M[i, i + 1] = i
 
     # Parte superior derecha (más allá de la diagonal justo encima)
     for d in range(2, n):  # distancia desde la diagonal principal
@@ -30,7 +30,3 @@ def generar_matriz(n, seed=None):
             M[i, j] = M[j, i] + 1
 
     return M
-
-n = 6
-matriz = generar_matriz(n)
-print(matriz)
